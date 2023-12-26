@@ -1,0 +1,125 @@
+.device {
+  user-select: none;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: white;
+  max-width: 250px;
+  height: 310px;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid lightgray;
+
+  border-radius: 2%;
+  overflow: hidden;
+  z-index: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0px 5px 5px rgb(107, 107, 107);
+  transition:
+    box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0px 11px 15px rgb(107, 107, 107);
+    transform: translateY();
+    color: rgb(183, 13, 13);
+  }
+}
+.device__first {
+  margin-bottom: 5px;
+  display: inline;
+  flex-direction: column;
+}
+.device__price {
+  margin-right: 15px;
+  align-items: center;
+  font-family: Orbitron;
+  padding: 0 auto;
+  display: flex;
+  text-align: center;
+ align-items: center;
+  justify-content: space-around;
+}
+.liked {
+  margin-left: 10px;
+  width: 40px;
+  margin-top: -10px;
+  margin-left: 1px;
+}
+.device__button {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.device_buy_btn {
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 66px;
+  height: 30px;
+  border: 0px;
+  color: white;
+  background-color: rgb(184, 83, 83);
+  &:hover {
+    background-color: rgb(183, 13, 13);
+  }
+}
+
+.device_green_btn {
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 66px;
+  height: 30px;
+  border: 0px;
+  color: white;
+  background-color: rgb(68, 199, 122);
+  &:hover {
+    background-color: rgb(113, 197, 44);
+  }
+}
+
+.umageUrl {
+  padding: 0 33px 0 33px;
+  cursor: pointer;
+  max-width: 100%;
+  transition: transform 500ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.title {
+  text-align: center;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+
+  font-family: Orbitron;
+}
+
+.device__text p {
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: Orbitron;
+  font-size: 18px;
+  text-decoration: line-through rgb(184, 83, 83);
+  text-decoration-thickness: 2px;
+  color: gray;
+}
+.title-2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(184, 83, 83);
+}
+
+.border {
+  margin-top: -5px;
+  cursor: pointer;
+  align-items: center;
+}
+.product {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+.product.active {
+  opacity: 1;
+  visibility: visible;
+}

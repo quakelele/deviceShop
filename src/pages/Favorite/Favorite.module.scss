@@ -1,0 +1,26 @@
+.favoritesWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 72%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f6f6f9;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 2%;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.device__ {
+  margin-top: 25px;
+
+  background-color: white;
+}
+h4 {
+  margin-top: 20px;
+}

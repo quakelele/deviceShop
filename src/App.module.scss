@@ -1,0 +1,21 @@
+.App {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #f6f6f9;
+}
+.AppFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f6f6f9;
+}
+
+.stik {
+  position: sticky;
+  display: inline-block;
+  top: 0px;
+  z-index: 55;
+  width: 100%;
+}

@@ -1,0 +1,179 @@
+.device__cart {
+  display: flex;
+  padding: 5px;
+  height: 100%;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.2 easy;
+  &:hover {
+    .one {
+      opacity: 1;
+    }
+    .two {
+      opacity: 1;
+      color: red;
+    }
+  }
+}
+
+.mainFirstBlock {
+  display: flex;
+
+  flex-direction: row;
+}
+.first_block {
+  margin-top: -10px;
+  max-width: 15%;
+}
+
+.secondBlock {
+  max-width: 150px;
+  min-width: 100px;
+  text-align: left;
+  display: flex;
+  margin-left: 25px;
+  flex-direction: column;
+  font-size: 15px;
+  h4 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 16px;
+  }
+}
+
+.thirdBlock {
+  span {
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+
+  p {
+    color: white;
+    margin-left: 0px;
+    display: inline-block;
+  }
+  align-items: top;
+  text-align: center;
+  margin-left: 111px;
+  display: flex;
+}
+.favoritesAndDelete {
+  display: flex;
+  margin-left: -10px;
+  margin-top: -100px;
+
+  .two {
+    margin-left: -5px;
+  }
+}
+// .btnPlusMinus {
+//   background-color: black;
+//   border: 0;
+//   border-radius: 5px;
+//   height: 33px;
+//   width: 33px;
+//   color: gray;
+//   cursor: pointer;
+
+//   transition:
+//     background-color 0.3s ease-in-out,
+//     transform 0.3s ease-in-out;
+//   &:hover {
+//     color: white;
+//     background: #424242e0 50%;
+//     p {
+//       color: white;
+//     }
+//   }
+// }
+.mainSecondBlock {
+  margin-top: 5px;
+  align-items: top;
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: 15px;
+    p {
+      margin-top: 10px;
+      margin-left: -5px;
+      text-decoration: line-through;
+      color: gray;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  }
+}
+
+.favoritesAndDelete {
+  text-align: center;
+  align-items: center;
+  margin-top: 25px;
+  position: absolute;
+
+  margin-left: 7px;
+  flex-direction: row;
+  .one {
+    margin: 0 auto;
+    margin-right: 11px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .two {
+    margin: 0 auto;
+    font-size: 17px;
+    color: red;
+    opacity: 0;
+    cursor: pointer;
+  }
+  span {
+    margin: 0 auto;
+  }
+}
+.btnPlusMinus {
+  background-color: white;
+  border: 0;
+  color: black;
+  border-radius: 5px;
+  height: 33px;
+  width: 33px;
+  align-items: center;
+  color: gray;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  p {
+    margin-top: -5px;
+    color: black;
+    font-size: 28px;
+    align-items: center;
+  }
+}
+
+.btnPlusMinusPassive {
+  align-items: center;
+  background-color: white;
+  border: 0;
+  border-radius: 5px;
+  height: 33px;
+  width: 33px;
+  cursor: default;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  p {
+    color: rgb(187, 187, 187);
+    margin-top: -5px;
+    font-size: 28px;
+  }
+}

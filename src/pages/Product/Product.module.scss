@@ -1,0 +1,79 @@
+.wrapper {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  overflow: hidden;
+  transition: all 1500ms ease;
+  h2 {
+    margin-bottom: 5px;
+  }
+  img {
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 9px;
+    transition: all 500ms ease;
+    &:hover { border: 0px solid rgb(196, 196, 196);
+      transform: scale(1.05);
+      top: -100px;
+    }
+  }
+  div {
+    margin-bottom: 10px;
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 9px;
+    p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: black;
+    }
+  }
+  button {
+  }
+}
+
+.device_buy_btn {
+  cursor: pointer;
+  border: 0px;
+  color: white;
+  background-color: rgb(184, 83, 83);
+  border-radius: 50%;
+}
+
+.device_green_btn {
+  cursor: pointer;
+  border: 0px;
+  color: white;
+  background-color: rgb(68, 199, 122);
+  &:hover {
+    background-color: rgb(113, 197, 44);
+  }
+}
+.wrapper p,
+h2 {
+  text-align: left;
+  margin: 10px 25px;
+  color: #333;
+}
+
+.x {
+    margin-top: -25px;
+    margin-left: 210px;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+ 
+  color: #333;
+  font-size: 1rem;
+
+  z-index: 91999;
+}
+
