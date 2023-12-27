@@ -8,17 +8,17 @@ import Footer from "./components/Footer/Footer";
 import Product from "./pages/Product/Product";
 import ProductMainPage from "./pages/ProductMainPage/ProductMainPage";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { fetchCart } from "./redux/slices/cartSlice";
 import { fetchDevice } from "./redux/slices/deviceSlice";
 import { fetchFavorite } from "./redux/slices/favoriteSlice";
 function App() {
   const dispatch = useDispatch();
   React.useEffect(() => {
-    dispatch(fetchDevice());
+   
     dispatch(fetchCart());
     dispatch(fetchFavorite());
-  }, [dispatch]);
+  }, [dispatch, ]);
   return (
     <div className={s.App}>
       <div className={s.stik}>

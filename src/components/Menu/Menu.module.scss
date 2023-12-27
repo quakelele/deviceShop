@@ -64,4 +64,17 @@ li {
   display: flex;
   flex-direction: column;
   font-size: 1.5rm;
+  cursor: pointer;
+}
+
+.actived {
+  color:white;
+
+}
+.unactive {
+  color: red;
+}
+.categories__wrapperd {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,4 +1,19 @@
+import { create } from "@mui/material/styles/createTransitions";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+// export const commentPut = createAsyncThunk('comment/commentPut', async (obj, { dispatch }) => {
+
+//   fetch(
+//     `http://localhost:3005/comment/${id}`
+//     , {
+//       method: 'PUT',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify([...comments, obj]),
+//     });
+
+// });
 
 export const commentDelete = createAsyncThunk(
   "comment/commentDelete",

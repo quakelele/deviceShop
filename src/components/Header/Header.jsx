@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Categories from "../Categories/Categories";
 import MuiDrawer from "../MuiDrawer/MuiDrawer";
 import Menu from "..//../components/Menu/Menu";
+import Sort from "../Sort/Sort";
 import { setIsOpen } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 const Header = () => {
@@ -32,6 +33,7 @@ const Header = () => {
           </div>
           <input />
         </div>
+        <Sort  />
         <ShopButton />
       </div>
       {/* <MuiDrawer/> */}

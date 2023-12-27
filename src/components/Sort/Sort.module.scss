@@ -1,5 +1,6 @@
 .sort__wrapper {
   margin-right: 100px;
+ 
   user-select: none;
   z-index: 1;
   span {
@@ -103,4 +104,8 @@
       text-decoration: underline;
     }
   }
+}
+
+.ebalvRot {
+  background-color: red;
 }

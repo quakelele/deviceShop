@@ -1,22 +1,20 @@
 import React from 'react'
 import s from './Menu.module.scss'
-
+import { changeCategory, fetchDevice } from '../../redux/slices/deviceSlice'
+import { categoriesList } from '../../utils/localData'
 import { useDispatch, useSelector } from 'react-redux'
 import { setIsOpen } from '../../redux/slices/cartSlice'
 const Menu = ({ header }) => {
     const dispatch = useDispatch()
+    const { filter } = useSelector(state => state.device)
     const { isOpen } = useSelector(state => state.cart)
 
-    const items = [
-        { value: 'Electronics', href: '#', icon: '' },
-        { value: 'Toys', href: '#', icon: '' },
-        { value: 'Home', href: '#', icon: '' },
-        { value: 'Products', href: '#', icon: '' },
-        { value: 'Clothes', href: '#', icon: '' },
-        { value: '18+ toys', href: '#', icon: '' },
-        { value: 'Sport', href: '#', icon: '' },
-        { value: 'Service', href: '#', icon: '' },
-    ]
+    const category = filter.category ? `category=${filter.category}` : ''
+    React.useEffect(() => {
+        dispatch(fetchDevice(category));
+    }, [dispatch, category])
+
+
     return (
         <div
             className={isOpen ? s.active : `${s.menu}`}
@@ -25,14 +23,15 @@ const Menu = ({ header }) => {
                 <div className={s.menu__content} onClick={e => e.stopPropagation()}>
                     <div
                         className={s.menu__header}> {header}</div>
-                    <ul>
-                        <li>
-                            <a href="#">Electronics</a>
-                            <a href="#">Toys</a>
-                            <a href="#">Home</a>
-                            <a href="#">Products</a>
-                            <a href="#">Clothes</a>
-                        </li>
+                    <ul className={s.categories__wrapperd}>
+
+                        {categoriesList.map((i,index) => <li key={index}
+                            className={`${i === filter.category ? s.unactive : s.actived}`}
+                            onClick={() => dispatch(changeCategory(i))}>
+
+                            {i}
+                        </li>)}
+
                     </ul>
                 </div>
             </div>

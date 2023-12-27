@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './InputField.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { addComment, commentDelete, commentFetch, postComment } from '../../../redux/slices/commentSlice'
+import { addComment, commentPut,commentDelete, commentFetch, postComment } from '../../../redux/slices/commentSlice'
 
 const InputField = ({ obj }) => {
     const dispatch = useDispatch()
@@ -20,7 +20,7 @@ const InputField = ({ obj }) => {
                 type="text"
             />
             <button
-                onClick={() => dispatch(postComment(inputValue))}
+                // onClick={() => dispatch(commentPut(inputValue))}
 
             >add</button>
             <div className={s.textCom}>
@@ -28,7 +28,9 @@ const InputField = ({ obj }) => {
                     <p style={{ color: "black" }}>
                         {comment.map(i => <li>
 
-                            <span>{i.title} <button onClick={() => dispatch(commentDelete(obj.id))}>x</button></span>
+                            <span>{i.title} <button
+                                //  onClick={() => dispatch(commentDelete(obj.id))}
+                                 >x</button></span>
 
 
                         </li>)}

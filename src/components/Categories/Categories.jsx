@@ -18,7 +18,6 @@ const Categories = ({ isOpen }) => {
 
             <div className={s.menu__category}>
 
-
                 <ul className={s.categories__wrapper}>
                     {categoriesList.map((item, index) =>
                         <li key={index}
