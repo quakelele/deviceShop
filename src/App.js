@@ -25,7 +25,7 @@ function App() {
         <Header />
       </div>
       <Routes>
-        <Route path="product/:category/:id" element={<ProductMainPage />} />
+        <Route path="/:id" element={<ProductMainPage />} />
         <Route path="/" element={<Home />} />
         <Route path="favorite" element={<Favorite />} />
         <Route path="cart" element={<Cart />} />

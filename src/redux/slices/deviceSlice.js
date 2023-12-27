@@ -1,22 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchDevice = createAsyncThunk(
-  "device/fetchDevice",
-  async () => {
-    const response = await fetch("http://localhost:3005/device");
-    const device = await response.json();
-    return device;
-  }
-);
-
-export const fetchEbal = createAsyncThunk(
-  "device/fetchEbal",
-  async (id) => {
-    const response = await fetch(`http://localhost:3005/device/${id}`);
-    const device = await response.json();
-    return device;
-  }
-);
+export const fetchDevice = createAsyncThunk("device/fetchDevice", async () => {
+  const response = await fetch("http://localhost:3005/device");
+  const device = await response.json();
+  return device;
+});
 
 export const fetchDeviceId = createAsyncThunk(
   "cart/fetchDeviceDevice",
@@ -27,12 +15,12 @@ export const fetchDeviceId = createAsyncThunk(
         "Content-Type": "application/json",
       },
     });
-    if (response.ok) {
-      dispatch(fetchEbal(id));
-    }
+
     return response.json();
   }
 );
+
+
 
 export const deviceSlice = createSlice({
   name: "device",
@@ -47,6 +35,7 @@ export const deviceSlice = createSlice({
     changeCategory(state, action) {
       state.filter = { ...state.filter, category: action.payload };
     },
+
   },
   extraReducers: (builder) => {
     builder.addCase(fetchDevice.pending, (state) => {

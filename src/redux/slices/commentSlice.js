@@ -16,28 +16,20 @@ export const commentDelete = createAsyncThunk(
 
 export const postComment = createAsyncThunk(
   "comment/postComment",
-  async (value, obj, { dispatch }) => {
+  async (inputValue, { dispatch }) => {
     const post = {
-      title: value,
+      title: inputValue,
     };
-    const newObj = obj.comments.push(post);
-    const response = await fetch("http://localhost:3005/comment", {
-      method: "PATCH",
+    fetch("http://localhost:3005/comment", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newObj),
+      body: JSON.stringify(post),
     });
-    if (response.ok) {
-      dispatch(commentFetch());
-    }
-    dispatch(addComment(newObj));
   }
 );
 
-// export const commentGet = createAsyncThunk("comment/commentGet", async(id) => {
-
-// })
 
 export const commentFetch = createAsyncThunk(
   "comment/commentFetch",

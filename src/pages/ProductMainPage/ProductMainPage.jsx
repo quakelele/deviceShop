@@ -3,13 +3,19 @@ import s from "./ProductMainPage.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import ProductCheckOut from './ProductCheckOut/ProductCheckOut'
 import InputField from "./InputField/InputField";
+import { useParams } from 'react-router-dom'
 import { fetchDeviceId } from "../../redux/slices/deviceSlice";
 const ProductMainPage = () => {
+  const { id } = useParams()
   const { product } = useSelector((state) => state.device);
   const dispatch = useDispatch()
+  React.useEffect(() => {
+    dispatch(fetchDeviceId(id))
+  }, [id, dispatch])
 
   return (
     <div className={s.wrapper2}>
+    
       <div className={s.wrapper}>
         <div className={s.title1}>
           <h1>{product.title}</h1>
@@ -27,7 +33,7 @@ const ProductMainPage = () => {
           </div>
         </div>
 
-        <InputField obj={product} />
+        <InputField obj={product} /> 
 
       </div>
       <ProductCheckOut />

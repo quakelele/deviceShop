@@ -44,9 +44,9 @@ const Device = ({ obj }) => {
             className="umageUrl"
             alt=""
           />
-          <Link to={`product/${obj.category}/${obj.id}`}>
+          <Link style={{ textDecoration: 'none', color:"black" }} to={`/${obj.id}`}>
             <span
-              onClick={() => dispatch(fetchDeviceId(obj.id))}
+              // onClick={() => dispatch(fetchDeviceId(obj))}
               className="title"
             >
               {obj.title}

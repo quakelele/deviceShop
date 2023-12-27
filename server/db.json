@@ -315,7 +315,26 @@
   ],
   "cart": [],
   "favorite": [],
-  "product": [],
+  "product": [
+    {
+      "title": "SteelSeries Rival 3",
+      "quantity": 1,
+      "price": 69,
+      "category": 0,
+      "imageUrl": "https://www.clife.ru/upload/iblock/f68/hbd38gewekksym4px824popeule8b412/steelseries_rival_3_4.png",
+      "rating": 1,
+      "id": 4
+    },
+    {
+      "title": "SteelSeries Apex Pro Mini Wireless",
+      "quantity": 1,
+      "price": 287,
+      "category": "Keyboard",
+      "imageUrl": "https://www.clife.ru/upload/iblock/2b9/steelseries_apex_pro_mini_wireless.jpg",
+      "rating": 4,
+      "id": 10
+    }
+  ],
   "comment": [
     {
       "title": "1",
@@ -352,6 +371,30 @@
     {
       "title": "55",
       "id": 0.5983409003659286
+    },
+    {
+      "title": "3131",
+      "id": 1.9276743457453753
+    },
+    {
+      "title": "31313131",
+      "id": 2.927674345745375
+    },
+    {
+      "title": "31313131",
+      "id": 3.927674345745375
+    },
+    {
+      "title": "31313131314",
+      "id": 4.927674345745375
+    },
+    {
+      "title": "4",
+      "id": 5.927674345745375
+    },
+    {
+      "title": "4",
+      "id": 6.927674345745375
     }
   ]
 }

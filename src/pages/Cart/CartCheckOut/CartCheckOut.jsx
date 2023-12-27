@@ -16,7 +16,7 @@ const CartCheckOut = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.title}>
-                <Link style={{ textDecoration: 'none' }} > <h4>Select delivery address</h4></Link>
+                <Link style={{ textDecoration: 'none', color:"black" }} > <h4>Select delivery address</h4></Link>
             </div>
             <div className={s.second}>
                 <span>Products, {quantity()} pc.</span>
