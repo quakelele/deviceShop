@@ -92,8 +92,8 @@
 .activated {
   border-right: 0.1 solid black;
   border-left: 0.1 solid black;
-  background-color: white;
   color: black;
+      background-color: white;
 }
 
 .sortingNames {
@@ -106,6 +106,8 @@
   }
 }
 
-.ebalvRot {
-  background-color: red;
+.deactivated {
+  background-color: black;
+  color: white;
+ font-size: 15px;
 }

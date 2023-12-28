@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchDevice = createAsyncThunk("device/fetchDevice", async (category) => {
-  const response = await fetch(`http://localhost:3005/device?${category}`);
-  const device = await response.json();
-  return device;
-});
+export const fetchDevice = createAsyncThunk(
+  "device/fetchDevice",
+  async (category, order, sortBy) => {
+    const response = await fetch(`http://localhost:3005/device?${category}`);
+    const device = await response.json();
+    return device;
+  }
+);
 
 export const fetchDeviceId = createAsyncThunk(
   "cart/fetchDeviceDevice",
@@ -20,8 +23,6 @@ export const fetchDeviceId = createAsyncThunk(
   }
 );
 
-
-
 export const deviceSlice = createSlice({
   name: "device",
   initialState: {
@@ -29,11 +30,18 @@ export const deviceSlice = createSlice({
     device: [],
     error: null,
     loading: false,
-    filter: { category: "" },
+    filter: {
+      category: "",
+      sortPrice: { from: 0, to: 0 },
+    },
   },
   reducers: {
     changeCategory(state, action) {
       state.filter = { ...state.filter, category: action.payload };
+    },
+
+    sortPrice(state, action) {
+      state.filter = { ...state.filter, sortPrice: action.payload };
     },
 
   },
@@ -55,5 +63,5 @@ export const deviceSlice = createSlice({
   },
 });
 
-export const { changeCategory } = deviceSlice.actions;
+export const { changeCategory,sortPrice } = deviceSlice.actions;
 export default deviceSlice.reducer;
