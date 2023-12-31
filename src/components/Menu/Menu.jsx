@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Menu.module.scss'
-import { changeCategory, fetchDevice } from '../../redux/slices/deviceSlice'
+import { changeCategory, fetchDevice, sortPriceFrom, sortPriceTo } from '../../redux/slices/deviceSlice'
 import { categoriesList } from '../../utils/localData'
 import { useDispatch, useSelector } from 'react-redux'
 import { setIsOpen } from '../../redux/slices/cartSlice'
@@ -8,11 +8,13 @@ const Menu = ({ header }) => {
     const dispatch = useDispatch()
     const { filter } = useSelector(state => state.device)
     const { isOpen } = useSelector(state => state.cart)
+    const [from, setFrom] = React.useState('')
+    const [to, setTo] = React.useState('')
 
-    const category = filter.category ? `category=${filter.category}` : ''
-    React.useEffect(() => {
-        dispatch(fetchDevice(category));
-    }, [dispatch, category])
+    const sortFromToHandler = (to, from) => {
+        dispatch(sortPriceTo(to))
+        dispatch(sortPriceFrom(from))
+    }
 
 
     return (
@@ -25,12 +27,20 @@ const Menu = ({ header }) => {
                         className={s.menu__header}> {header}</div>
                     <ul className={s.categories__wrapperd}>
 
-                        {categoriesList.map((i,index) => <li key={index}
-                            className={`${i === filter.category ? s.unactive : s.actived}`}
-                            onClick={() => dispatch(changeCategory(i))}>
+                        <div className={s.sortFrom}>
+                            <b >From</b>
+                            <input
 
-                            {i}
-                        </li>)}
+                                onChange={(e) => setFrom(e.target.value)} />
+                            <b >To</b>
+                            <input
+                                onChange={(e) => setTo(e.target.value)} />
+                        </div>
+                        <div>
+                            <button 
+                            onClick={() => sortFromToHandler(to,from)}
+                            className={s.showBtn}>show</button>
+                        </div>
 
                     </ul>
                 </div>
@@ -40,3 +50,8 @@ const Menu = ({ header }) => {
 }
 
 export default Menu
+
+
+
+
+
