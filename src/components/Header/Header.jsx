@@ -25,7 +25,9 @@ const Header = () => {
     <>
       <div className={s.header__wrapper}>
         <Link style={{ textDecoration: "none" }} to="/">
-          <h1 onClick={() => dispatch(fetchDevice(''))}>Cyber Shop</h1>
+          <h1 
+          onClick={() => dispatch(fetchDevice(''))}
+          >Cyber Shop</h1>
         </Link>
         <div className={s.input2}>
           <div>

@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from 'react-redux'
 const Categories = ({ isOpen }) => {
     const dispatch = useDispatch()
     const { filter } = useSelector(state => state.device)
-    const category = filter.category ? `category=${filter.category}` : ''
+    // const category = filter.category ? `category=${filter.category}` : ''
     React.useEffect(() => {
-        dispatch(fetchDevice(category));
+        dispatch(fetchDevice(filter));
 
-    }, [dispatch, category])
+    }, [dispatch, filter])
 
     return (
 

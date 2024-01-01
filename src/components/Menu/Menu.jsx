@@ -16,6 +16,9 @@ const Menu = ({ header }) => {
         dispatch(sortPriceFrom(from))
     }
 
+    // React.useEffect(() => {
+
+    // }, [])
 
     return (
         <div
@@ -34,12 +37,14 @@ const Menu = ({ header }) => {
                                 onChange={(e) => setFrom(e.target.value)} />
                             <b >To</b>
                             <input
+                            value={to}
                                 onChange={(e) => setTo(e.target.value)} />
                         </div>
                         <div>
-                            <button 
-                            onClick={() => sortFromToHandler(to,from)}
-                            className={s.showBtn}>show</button>
+                            <button
+                            value={from}
+                                onClick={() => sortFromToHandler(to, from)}
+                                className={s.showBtn}>show</button>
                         </div>
 
                     </ul>

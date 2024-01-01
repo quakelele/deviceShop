@@ -4,6 +4,7 @@ import { useSelector, } from 'react-redux'
 import Sceleton from '../Sceleton/Sceleton'
 import Sort from '..//..//components/Sort/Sort'
 import Device from '..//../components/Device/Device'
+import { a } from 'react-spring'
 
 const Home = () => {
     const { device, loading } = useSelector(state => state.device)
