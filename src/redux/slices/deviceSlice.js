@@ -2,9 +2,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchDevice = createAsyncThunk(
   "device/fetchDevice",
-  async (filter) => {
+  async (filter,) => {
     const filterCategory = filter.category ? `category=${filter.category}` : ''
-    const response = await fetch(`http://localhost:3005/device?${filterCategory}`);
+    const priceFrom = filter.sortPrice.from ? `&price_gte=${filter.sortPrice.from}` : ''
+    const priceTo = filter.sortPrice.to ? `&price_lte=${filter.sortPrice.to}` : ''
+
+
+    const response = await
+      fetch(`http://localhost:3005/device?${filterCategory}${priceFrom}${priceTo}`);
     const device = await response.json();
     return device;
   }

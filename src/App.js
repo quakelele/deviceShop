@@ -5,17 +5,14 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Favorite from "./pages/Favorite/Favorite";
 import Footer from "./components/Footer/Footer";
-import Product from "./pages/Product/Product";
 import ProductMainPage from "./pages/ProductMainPage/ProductMainPage";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchCart } from "./redux/slices/cartSlice";
-import { fetchDevice } from "./redux/slices/deviceSlice";
 import { fetchFavorite } from "./redux/slices/favoriteSlice";
 function App() {
   const dispatch = useDispatch();
   React.useEffect(() => {
-   
     dispatch(fetchCart());
     dispatch(fetchFavorite());
   }, [dispatch, ]);

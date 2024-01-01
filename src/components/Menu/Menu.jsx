@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setIsOpen } from '../../redux/slices/cartSlice'
 const Menu = ({ header }) => {
     const dispatch = useDispatch()
-    const { filter } = useSelector(state => state.device)
     const { isOpen } = useSelector(state => state.cart)
     const [from, setFrom] = React.useState('')
     const [to, setTo] = React.useState('')
@@ -15,10 +14,6 @@ const Menu = ({ header }) => {
         dispatch(sortPriceTo(to))
         dispatch(sortPriceFrom(from))
     }
-
-    // React.useEffect(() => {
-
-    // }, [])
 
     return (
         <div
@@ -33,16 +28,16 @@ const Menu = ({ header }) => {
                         <div className={s.sortFrom}>
                             <b >From</b>
                             <input
-
-                                onChange={(e) => setFrom(e.target.value)} />
+                                placeholder={0}
+                                onChange={(e) => setFrom(+e.target.value)} />
                             <b >To</b>
                             <input
-                            value={to}
-                                onChange={(e) => setTo(e.target.value)} />
+                                placeholder={0}
+                                onChange={(e) => setTo(+e.target.value)} />
                         </div>
                         <div>
                             <button
-                            value={from}
+                                value={from}
                                 onClick={() => sortFromToHandler(to, from)}
                                 className={s.showBtn}>show</button>
                         </div>
