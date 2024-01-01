@@ -10,23 +10,19 @@ import { fetchDevice } from "../../redux/slices/deviceSlice";
 import { setIsOpen } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 const Header = () => {
+  const dispatch = useDispatch();
   const handleMenuButtonClick = () => {
     dispatch(setIsOpen(isOpen));
   };
   const { isOpen } = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
 
-  React.useEffect(() => {
 
-    window.scrollTo(0, 25);
-  }, []);
 
   return (
     <>
       <div className={s.header__wrapper}>
         <Link style={{ textDecoration: "none" }} to="/">
           <h1
-            onClick={() => dispatch(fetchDevice(''))}
           >Cyber Shop</h1>
         </Link>
         <div className={s.input2}>

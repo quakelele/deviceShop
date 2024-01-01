@@ -15,6 +15,11 @@ const Menu = ({ header }) => {
         dispatch(sortPriceFrom(from))
     }
 
+    const resetPrice = (to, from) => {
+        dispatch(sortPriceTo(to))
+        dispatch(sortPriceFrom(from))
+    }
+
     return (
         <div
             className={isOpen ? s.active : `${s.menu}`}
@@ -40,6 +45,10 @@ const Menu = ({ header }) => {
                                 value={from}
                                 onClick={() => sortFromToHandler(to, from)}
                                 className={s.showBtn}>show</button>
+                                <button
+                                value={from}
+                                onClick={() => resetPrice(0, 0)}
+                                className={s.resetBtn}>reset</button>
                         </div>
 
                     </ul>
