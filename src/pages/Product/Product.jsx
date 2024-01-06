@@ -12,7 +12,7 @@ const Product = ({ cart, obj, setIsOn, isOn }) => {
     return "device_buy_btn";
   };
 
-
+  console.log(obj)
   
   return (
     <div className={s.wrapper}>

@@ -90,21 +90,21 @@
   margin-left: 10px;
   font-size: 14px;
   font-weight: 700;
-
+margin:0 auto;
   font-family: Orbitron;
 }
 
 .device__text p {
-  margin-bottom: 5px;
-  text-align: left;
+
+  margin:0 auto;
   font-family: Orbitron;
-  font-size: 18px;
+  font-size: 15px;
   text-decoration: line-through rgb(184, 83, 83);
   text-decoration-thickness: 2px;
   color: gray;
 }
 .title-2 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   color: rgb(184, 83, 83);
 }
@@ -123,3 +123,4 @@
   opacity: 1;
   visibility: visible;
 }
+

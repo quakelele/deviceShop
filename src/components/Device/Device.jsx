@@ -1,6 +1,7 @@
 import React from "react";
 import "../Device/Device.css";
 import { useDispatch, useSelector } from "react-redux";
+import { Box, Rating, Typography } from '@mui/material';
 import { addToCart } from "../../redux/slices/cartSlice";
 import { addToFavorites } from "../../redux/slices/favoriteSlice";
 import { fetchDeviceId } from "../../redux/slices/deviceSlice";
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 import Product from "./../../pages/Product/Product";
 const Device = ({ obj }) => {
 
-
+  const [rating, setRating] = React.useState(2);
   const { favorite } = useSelector((state) => state.favorite);
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -38,25 +39,33 @@ const Device = ({ obj }) => {
       </div>
       <div className="device">
         <div className="device__first">
+
+          
+
           <img
             onClick={() => setIsOn(!isOn)}
             src={obj.imageUrl}
             className="umageUrl"
             alt=""
           />
-          <Link style={{ textDecoration: 'none', color:"black" }} to={`/${obj.id}`}>
+          <Link style={{ textDecoration: 'none', color: "black" }} to={`/${obj.id}`}>
             <span
               // onClick={() => dispatch(fetchDeviceId(obj))}
               className="title"
             >
               {obj.title}
+              
             </span>
+            
           </Link>
+          
         </div>
         <div className="device__price">
+          
           <div className="device__text">
             <p>Price: {cartDiscount(obj)} $</p>
             <h2 className="title-2">{obj.price} $</h2>
+            <Rating className="rating" max={6} size="small" name="read-only" value={obj.rating/2} readOnly />
           </div>
           <div className="device__button">
             <button
@@ -65,6 +74,7 @@ const Device = ({ obj }) => {
             >
               Buy
             </button>
+            
             <div className="border">
               <img
                 onClick={() => dispatch(addToFavorites(obj))}

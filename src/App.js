@@ -15,7 +15,7 @@ function App() {
   React.useEffect(() => {
     dispatch(fetchCart());
     dispatch(fetchFavorite());
-  }, [dispatch, ]);
+  }, [dispatch ]);
   return (
     <div className={s.App}>
       <div className={s.stik}>

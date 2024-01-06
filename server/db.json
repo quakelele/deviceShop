@@ -6,14 +6,22 @@
       "types": [
         0
       ],
-      "id": 1,
-      "quantity": 1,
-      "comments": [],
       "price": 60,
+      "comments": [
+        {
+          "value": "3131",
+          "id": 0.31722281386297446
+        },
+        {
+          "value": "313552352",
+          "id": 0.4615773554424065
+        }
+      ],
       "category": "Mouse",
       "rating": 6,
       "weight": 77,
-      "description": "Swiss quality at an affordable price - what could be better? Only quality in a strict design with programmable keys and innovative lighting that will fit into any interior, will last for many years and will not let you down in a difficult gaming situation. "
+      "id": 1,
+      "description": "Швейцарское качество по уместной цене – что может быть лучше? Только качество в строгом оформлении с программируемыми клавишами и инновационной подсветкой, которое впишется в любой интерьер, прослужит долгие годы и не подведет в сложной игровой ситуации. В современном мире от случайного клика мыши в неподходящем месте может зависеть многое: финансовый перевод не по адресу, нежелательное сообщение бизнес-партнерам, проигрыш в решающий момент турнира, где приз составляет миллион долларов. С высококачественной мышью от Logitech можно быть уверенным: клик будет точно в цель."
     },
     {
       "imageUrl": "https://www.clife.ru/upload/iblock/010/logitech_g_pro_wireless_1.png",
@@ -36,6 +44,7 @@
       "types": [
         0
       ],
+      "comments": [],
       "price": 98,
       "category": 0,
       "quantity": 1,
@@ -51,6 +60,7 @@
         0
       ],
       "price": 69,
+      "comments": [],
       "category": 0,
       "quantity": 1,
       "rating": 1,
@@ -66,6 +76,7 @@
       ],
       "price": 79,
       "quantity": 1,
+      "comments": [],
       "category": 0,
       "rating": 2,
       "weight": 85,
@@ -126,7 +137,7 @@
       "comments": [],
       "price": 399,
       "category": "Keyboard",
-      "rating": 2,
+      "rating":  8,
       "quantity": 1,
       "id": 9,
       "weight": 1290,
@@ -315,90 +326,6 @@
   ],
   "cart": [],
   "favorite": [],
-  "product": [
-    {
-      "title": "SteelSeries Rival 3",
-      "quantity": 1,
-      "price": 69,
-      "category": 0,
-      "imageUrl": "https://www.clife.ru/upload/iblock/f68/hbd38gewekksym4px824popeule8b412/steelseries_rival_3_4.png",
-      "rating": 1,
-      "id": 4
-    },
-    {
-      "title": "SteelSeries Apex Pro Mini Wireless",
-      "quantity": 1,
-      "price": 287,
-      "category": "Keyboard",
-      "imageUrl": "https://www.clife.ru/upload/iblock/2b9/steelseries_apex_pro_mini_wireless.jpg",
-      "rating": 4,
-      "id": 10
-    }
-  ],
-  "comment": [
-    {
-      "title": "1",
-      "id": 0.9276743457453753
-    },
-    {
-      "title": "12",
-      "id": 0.19785688869129525
-    },
-    {
-      "title": "41",
-      "id": 0.07953141514676387
-    },
-    {
-      "title": "55",
-      "id": 0.19738766632550053
-    },
-    {
-      "title": "55",
-      "id": 0.8565569075224453
-    },
-    {
-      "title": "55",
-      "id": 0.03246864115110171
-    },
-    {
-      "title": "55",
-      "id": 0.6070239143834737
-    },
-    {
-      "title": "55",
-      "id": 0.3836942771903751
-    },
-    {
-      "title": "55",
-      "id": 0.5983409003659286
-    },
-    {
-      "title": "3131",
-      "id": 1.9276743457453753
-    },
-    {
-      "title": "31313131",
-      "id": 2.927674345745375
-    },
-    {
-      "title": "31313131",
-      "id": 3.927674345745375
-    },
-    {
-      "title": "31313131314",
-      "id": 4.927674345745375
-    },
-    {
-      "title": "4",
-      "id": 5.927674345745375
-    },
-    {
-      "title": "4",
-      "id": 6.927674345745375
-    },
-    {
-      "title": "111",
-      "id": 7.927674345745375
-    }
-  ]
+  "product": [],
+  "comment": []
 }
