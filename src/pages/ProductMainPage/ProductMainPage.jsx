@@ -5,6 +5,7 @@ import ProductCheckOut from './ProductCheckOut/ProductCheckOut'
 import InputField from "./InputField/InputField";
 import { useParams } from 'react-router-dom'
 import { fetchDeviceId } from "../../redux/slices/deviceSlice";
+import { Box, Rating, Typography } from '@mui/material';
 const ProductMainPage = () => {
   const { id } = useParams()
   const { product } = useSelector((state) => state.device);
@@ -18,6 +19,7 @@ const ProductMainPage = () => {
     
       <div className={s.wrapper}>
         <div className={s.title1}>
+        
           <h1>{product.title}</h1>
         </div>
         <div className={s.image}>
@@ -28,7 +30,8 @@ const ProductMainPage = () => {
             alt=""
           />
           <div className={s.button}>
-            <h5> Gaming {product.category}</h5>
+          <Rating className="rating" max={5} size="small" name="read-only" value={product.rating} readOnly />
+            <h5> Gaming {product.category} </h5>
             <p className={s.description}>{product.description}</p>
           </div>
         </div>

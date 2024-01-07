@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import Product from "./../../pages/Product/Product";
 const Device = ({ obj }) => {
 
-  const [rating, setRating] = React.useState(2);
   const { favorite } = useSelector((state) => state.favorite);
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -65,7 +64,7 @@ const Device = ({ obj }) => {
           <div className="device__text">
             <p>Price: {cartDiscount(obj)} $</p>
             <h2 className="title-2">{obj.price} $</h2>
-            <Rating className="rating" max={6} size="small" name="read-only" value={obj.rating/2} readOnly />
+            <Rating className="rating" max={5} size="small" name="read-only" value={obj.rating} readOnly />
           </div>
           <div className="device__button">
             <button

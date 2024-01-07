@@ -4,7 +4,6 @@ export const putComment = createAsyncThunk(
   "resource/put",
   async (obj, { dispatch, getState }) => {
     const { inputValues } = getState().device;
-
     const response = await fetch(`http://localhost:3005/device/${obj.id}`, {
       method: "PUT",
       headers: {
@@ -25,7 +24,9 @@ export const putComment = createAsyncThunk(
 export const fetchDevice = createAsyncThunk(
   "device/fetchDevice",
   async (_, { getState }) => {
-    const { filter } = getState().device;
+    const { filter, searchValue } = getState().device;
+    const search = searchValue ? `title_like=${searchValue}` : "";
+    // console.log("search:", searchValue);
     const priceSortOrder = filter?.order
       ? `&_sort=price&_order=${filter.order}`
       : "";
@@ -40,7 +41,7 @@ export const fetchDevice = createAsyncThunk(
       : "";
 
     const response = await fetch(
-      `http://localhost:3005/device?${filterCategory}${priceFrom}${priceTo}${priceSortOrder}`
+      `http://localhost:3005/device?${filterCategory}${priceFrom}${priceTo}${priceSortOrder}${search}`
     );
 
     const deviced = await response.json();
@@ -65,6 +66,7 @@ export const fetchDeviceId = createAsyncThunk(
 export const deviceSlice = createSlice({
   name: "device",
   initialState: {
+    searchValue: "",
     inputValues: [],
     product: [],
     device: [],
@@ -78,6 +80,10 @@ export const deviceSlice = createSlice({
     },
   },
   reducers: {
+    setSearchValue(state, action) {
+      state.searchValue = action.payload;
+      // console.log("state.searchValue:", state.searchValue);
+    },
     setInputz(state, action) {
       state.inputValues = [
         ...state.inputValues,
@@ -139,6 +145,7 @@ export const {
   productCommentAdd,
   setOrder,
   toLowNhigh,
+  setSearchValue,
   resetCategory,
   changeCategory,
   sortPriceFrom,

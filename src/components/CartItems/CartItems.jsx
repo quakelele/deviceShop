@@ -5,7 +5,7 @@ import { deleteFromCartBack, plusQuantity, minusQuantity } from '..//..//redux/s
 import { useDispatch, useSelector } from 'react-redux'
 import liked from '..//..//img/heart-liked.png'
 import unLiked from '..//..//img/heart-unliked.png'
-
+import { Box, Rating, Typography } from '@mui/material';
 const CartItems = ({ obj }) => {
 
     const dispatch = useDispatch()
@@ -36,10 +36,11 @@ const CartItems = ({ obj }) => {
 
                 <div className={s.secondBlock}>
                     <h4>{obj.title}</h4>
+                    <Rating className="rating" max={5} size="small" name="read-only" value={obj.rating} readOnly />
                     <p>wireless</p>
-                    <p>225kg</p>
+                    {/* <p>{obj.weight}kg</p> */}
                 </div>
-
+                
                 <div className={s.thirdBlock}>
                     <button
                         className={obj.quantity === 1 ? s.btnPlusMinusPassive : `${s.btnPlusMinus}`}

@@ -6,13 +6,18 @@ import Menu from "..//../components/Menu/Menu";
 import Sort from "../Sort/Sort";
 import { setIsOpen } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { resetCategory } from "../../redux/slices/deviceSlice";
+import { resetCategory, setSearchValue } from "../../redux/slices/deviceSlice";
 const Header = () => {
   const dispatch = useDispatch();
   const handleMenuButtonClick = () => {
     dispatch(setIsOpen(isOpen));
   };
   const { isOpen } = useSelector((state) => state.cart);
+  // const [search, setSearch] = React.useState('')
+
+  React.useEffect(() => {
+
+  },[dispatch])
 
   return (
     <>
@@ -26,7 +31,11 @@ const Header = () => {
             {" "}
             <button onClick={handleMenuButtonClick}> x</button>
           </div>
-          <input />
+          <input
+          // onKeyDown={(e) => {if(e.key === 'Enter') {console.log('najat')}}}
+            placeholder="Push me please.."
+            onChange={(e) => dispatch(setSearchValue(e.target.value))}
+          />
         </div>
 
         <Sort />
