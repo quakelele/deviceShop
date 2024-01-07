@@ -6,8 +6,9 @@
       "types": [
         0
       ],
-      "price": 60,
+      "price": 62,
       "comments": [],
+      "quantity": 1,
       "category": "Mouse",
       "rating": 4.3,
       "weight": 77,
@@ -21,7 +22,16 @@
         0
       ],
       "price": 116,
-      "comments": [],
+      "comments": [
+        {
+          "value": "25",
+          "id": 0.91846421865289
+        },
+        {
+          "value": "555",
+          "id": 0.05126139090036119
+        }
+      ],
       "id": 2,
       "quantity": 1,
       "category": "Mouse",

@@ -64,7 +64,7 @@ const Device = ({ obj }) => {
           <div className="device__text">
             <p>Price: {cartDiscount(obj)} $</p>
             <h2 className="title-2">{obj.price} $</h2>
-            <Rating className="rating" max={5} size="small" name="read-only" value={obj.rating} readOnly />
+            <Rating precision={0.5} name="half-rating" className="rating" max={5} size="small" value={obj.rating} readOnly />
           </div>
           <div className="device__button">
             <button

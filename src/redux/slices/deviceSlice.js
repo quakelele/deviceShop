@@ -6,15 +6,11 @@ export const putComment = createAsyncThunk(
     const { inputValues } = getState().device;
     const response = await fetch(`http://localhost:3005/device/${obj.id}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify({
         ...obj,
         comments: inputValues,
       }),
     });
-    console.log("obj", obj);
     if (response.ok) {
       dispatch(fetchDevice());
     }
@@ -25,8 +21,7 @@ export const fetchDevice = createAsyncThunk(
   "device/fetchDevice",
   async (_, { getState }) => {
     const { filter, searchValue } = getState().device;
-    const search = searchValue ? `title_like=${searchValue}` : "";
-    // console.log("search:", searchValue);
+    const search = searchValue ? `&title_like=${searchValue}` : "";
     const priceSortOrder = filter?.order
       ? `&_sort=price&_order=${filter.order}`
       : "";
@@ -43,7 +38,6 @@ export const fetchDevice = createAsyncThunk(
     const response = await fetch(
       `http://localhost:3005/device?${filterCategory}${priceFrom}${priceTo}${priceSortOrder}${search}`
     );
-
     const deviced = await response.json();
     return deviced;
   }
@@ -53,14 +47,11 @@ export const fetchDeviceId = createAsyncThunk(
   "cart/fetchDeviceDevice",
   async (id) => {
     const response = await fetch(`http://localhost:3005/device/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      method: "GET"
     });
-
     return response.json();
-  }
+    
+  } 
 );
 
 export const deviceSlice = createSlice({
@@ -82,7 +73,6 @@ export const deviceSlice = createSlice({
   reducers: {
     setSearchValue(state, action) {
       state.searchValue = action.payload;
-      // console.log("state.searchValue:", state.searchValue);
     },
     setInputz(state, action) {
       state.inputValues = [

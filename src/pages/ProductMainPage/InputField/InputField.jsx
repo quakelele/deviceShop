@@ -7,7 +7,6 @@ const InputField = ({ obj }) => {
     const dispatch = useDispatch()
     const [inputValue, setInputValue] = React.useState('')
     const { inputValues, product } = useSelector(state => state.device)
-    console.log("product", product)
     React.useEffect(() => {
 
     }, [dispatch,inputValues])

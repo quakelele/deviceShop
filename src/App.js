@@ -15,12 +15,10 @@ function App() {
   React.useEffect(() => {
     dispatch(fetchCart());
     dispatch(fetchFavorite());
-  }, [dispatch ]);
+  }, [dispatch]);
   return (
     <div className={s.App}>
-      <div className={s.stik}>
-        <Header />
-      </div>
+      <Header />
       <Routes>
         <Route path="/:id" element={<ProductMainPage />} />
         <Route path="/" element={<Home />} />
