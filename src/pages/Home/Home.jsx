@@ -8,22 +8,17 @@ const Home = () => {
     const { device, loading, searchValue } = useSelector(state => state.device)
     const dispatch = useDispatch()
     React.useEffect(() => {
-
         dispatch(fetchDevice())
-
         window.scrollTo(0, 25);
-    }, [dispatch,searchValue]);
+    }, [dispatch, searchValue]);
 
     const sceletonRender = [...new Array(8)].map((_, index) => <Sceleton key={index} />)
     const deviceRender = (device.map((obj, index) => <Device key={index} obj={obj} />))
 
     return (
-        <div >
-            <div className={s.wrapper}>
-            </div>
-            <div className={s.device} >
-                {loading ? sceletonRender : deviceRender}
-            </div>
+
+        <div className={s.device} >
+            {loading ? sceletonRender : deviceRender}
         </div>
     )
 }

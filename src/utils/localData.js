@@ -15,4 +15,4 @@ export const sortingList = [
   { name: "title (ASC)", sortProperty: "-title" },
 ];
 
-
+export const itemType = ["Wireless", "Corded"];

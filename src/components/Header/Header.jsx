@@ -24,7 +24,8 @@ const Header = () => {
   const inputRef = React.useRef()
 
   React.useEffect(() => {
-  }, [dispatch])
+  }, [dispatch,])
+
 
   return (
     <>
@@ -45,7 +46,7 @@ const Header = () => {
               onChange={(e) => dispatch(setSearchValue(e.target.value))}
             />
             <div className={s.svgClose}>
-              <ClearIcon onClick={(e) => clearValue()} />
+              <ClearIcon onClick={() => clearValue()} />
             </div>
           </div>
         </div>

@@ -73,3 +73,8 @@
   display: inline-block;
   color: gray;
 }
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+}

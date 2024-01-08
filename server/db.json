@@ -325,7 +325,80 @@
       "description": "A series of Astral game chairs from the young domestic brand VMM Gaming, despite its novelty, gained wide popularity.One of the most rating models of this series was the computer chair VMM Gaming Astral Red, which has an expressive color design, which clearly indicates the gaming specifics of the product."
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "title": "HyperX Alloy FPS Pro Cherry MX Red",
+      "quantity": 1,
+      "price": 237,
+      "category": "Keyboard",
+      "imageUrl": "https://www.clife.ru/upload/iblock/35e/hyperx_alloy_fps_pro_1.jpg",
+      "rating": 4,
+      "id": 11
+    },
+    {
+      "title": "SteelSeries Apex Pro Mini Wireless",
+      "quantity": 1,
+      "price": 287,
+      "category": "Keyboard",
+      "imageUrl": "https://www.clife.ru/upload/iblock/2b9/steelseries_apex_pro_mini_wireless.jpg",
+      "rating": 4,
+      "id": 10
+    },
+    {
+      "title": "SteelSeries Apex Pro TKL",
+      "quantity": 1,
+      "price": 399,
+      "category": "Keyboard",
+      "imageUrl": "https://www.clife.ru/upload/iblock/322/steelseries_apex_7_tkl_1.png",
+      "rating": 4,
+      "id": 9
+    },
+    {
+      "title": "HyperX Alloy Origins RGB Blue Switches",
+      "quantity": 1,
+      "price": 267,
+      "category": "Keyboard",
+      "imageUrl": "https://www.clife.ru/upload/iblock/ef2/zorzi2g1e8a8e2esu5dtiv9w9axihpiq/hyperx_alloy_origins_3.png",
+      "rating": 3.5,
+      "id": 12
+    },
+    {
+      "title": "Logitech G102 Prodigy",
+      "quantity": 1,
+      "price": 62,
+      "category": "Mouse",
+      "imageUrl": "https://www.clife.ru/upload/iblock/04d/logitech_g102_prodigy_1.png",
+      "rating": 4.3,
+      "id": 1
+    },
+    {
+      "title": "Logitech G Pro Wireless",
+      "quantity": 1,
+      "price": 116,
+      "category": "Mouse",
+      "imageUrl": "https://www.clife.ru/upload/iblock/010/logitech_g_pro_wireless_1.png",
+      "rating": 4.4,
+      "id": 2
+    },
+    {
+      "title": "Logitech G502 LIGHTSPEED",
+      "quantity": 1,
+      "price": 98,
+      "category": 0,
+      "imageUrl": "https://www.clife.ru/upload/iblock/681/logitech_g502_lightspeed_1.jpg",
+      "rating": 4.5,
+      "id": 3
+    },
+    {
+      "title": "SteelSeries Rival 3",
+      "quantity": 1,
+      "price": 69,
+      "category": 0,
+      "imageUrl": "https://www.clife.ru/upload/iblock/f68/hbd38gewekksym4px824popeule8b412/steelseries_rival_3_4.png",
+      "rating": 3,
+      "id": 4
+    }
+  ],
   "favorite": [],
   "product": [],
   "comment": []

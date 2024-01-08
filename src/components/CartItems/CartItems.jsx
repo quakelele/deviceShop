@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './CartItems.module.scss'
+import { itemType } from '../../utils/localData'
 import { deleteFromFavorite } from '..//../redux/slices/favoriteSlice'
 import { deleteFromCartBack, plusQuantity, minusQuantity } from '..//..//redux/slices/cartSlice'
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,7 +23,6 @@ const CartItems = ({ obj }) => {
     }
 
 
-
     return (
 
         <div className={s.device__cart}>
@@ -36,7 +36,7 @@ const CartItems = ({ obj }) => {
                 <div className={s.secondBlock}>
                     <h4>{obj.title}</h4>
                     <Rating className="rating" precision={0.5} name="half-rating" max={5} size="small"  value={obj.rating} readOnly />
-                    <p>wireless</p>
+                    <p>{obj.types}</p>
                 </div>
 
                 <div className={s.thirdBlock}>
